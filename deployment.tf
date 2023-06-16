@@ -53,7 +53,7 @@ resource "kubernetes_deployment" "app_deployment" {
 
         container {
 
-          image = "313023809280.dkr.ecr.us-east-1.amazonaws.com/project_repo:latest"
+          image = "<your_ECR_repo_URL>"
           name  = "mycontainer"
 
           port {
