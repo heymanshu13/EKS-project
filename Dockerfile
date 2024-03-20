@@ -10,5 +10,5 @@ RUN dotnet publish WebApplication1.csproj -c Release -o /app/bin/Publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
-COPY --from=build /app/bin/Publish .
+COPY --from=build-env /app/bin/Publish .
 ENTRYPOINT ["dotnet", "WebApplication1.dll"]
